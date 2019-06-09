@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>物业管理系统</title>
+
+<!-- Bootstrap -->
+<link href="../vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link href="../vendors/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- NProgress -->
+<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="ownerIndex.html" class="site_title"><i
+							class="fa fa-paw"></i> <span>物业管理系统</span></a>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<!-- menu profile quick info -->
+					<div class="profile clearfix">
+						<div class="profile_pic">
+							<img src="images/img.jpg" alt="..."
+								class="img-circle profile_img">
+						</div>
+						<div class="profile_info">
+							<span>Welcome</span>
+							<h2>**业主</h2>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- /menu profile quick info -->
+
+					<br />
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu"
+						class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">
+							<h3>业主菜单</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-home"></i> 房屋装修 <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="maintainHouse.html">房屋请修申请</a></li>
+										<li><a href="decorateHouse.html">房屋装修申请</a></li>
+									</ul></li>
+
+								<li><a><i class="fa fa-edit"></i> 业委会查询 <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="businessMember.html">业委会成员</a></li>
+									</ul></li>
+
+								<li><a><i class="fa fa-desktop"></i> 服务申请 <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="applyService.html">申请物业服务</a></li>
+										<li><a href="complainAdvice.html">业主投诉建议</a></li>
+									</ul></li>
+
+								<li><a><i class="fa fa-bar-chart-o"></i> 费用查询 <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="findWaterCost.html">水费查询</a></li>
+										<li><a href="findElectricCost.html">电费查询</a></li>
+										<li><a href="findPropertyCost.html">物业费查询</a></li>
+										<li><a href="findPollutionCost.html">排污费查询</a></li>
+										<li><a href="pay.html">缴费</a></li>
+									</ul></li>
+
+							</ul>
+						</div>
+					</div>
+					<!-- /sidebar menu -->
+
+
+				</div>
+			</div>
+
+			<!-- top navigation -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<nav>
+						<div class="nav toggle">
+							<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+						</div>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class=""><a href="javascript:;"
+								class="user-profile dropdown-toggle" data-toggle="dropdown"
+								aria-expanded="false"> <img src="images/img.jpg" alt="">**业主
+									<span class=" fa fa-angle-down"></span>
+							</a>
+								<ul class="dropdown-menu dropdown-usermenu pull-right">
+									<li><a href="changePassword.html"> 修改密码</a></li>
+
+									<li><a href="changeData.html">修改资料</a></li>
+
+									<li><a href="login.html"><i
+											class="fa fa-sign-out pull-right"></i> 注销登录</a></li>
+								</ul></li>
+
+							<li role="presentation" class="dropdown"><a
+								href="javascript:;" class="dropdown-toggle info-number"
+								data-toggle="dropdown" aria-expanded="false"> <i
+									class="fa fa-envelope-o"></i> <span class="badge bg-green">2</span>
+							</a>
+								<ul id="menu1" class="dropdown-menu list-unstyled msg_list"
+									role="menu">
+									<li><a> <span class="image"><img
+												src="images/img.jpg" alt="Profile Image" /></span> <span> <span>系统</span>
+												<span class="time">2010-2-1</span>
+										</span> <span class="message"> 水费缴纳成功... </span>
+									</a></li>
+
+									<li><a> <span class="image"><img
+												src="images/img.jpg" alt="Profile Image" /></span> <span> <span>**物业人员</span>
+												<span class="time">2010-1-30</span>
+										</span> <span class="message"> 本周末禁止A拍照车辆进入小区内... </span>
+									</a></li>
+									<li>
+										<div class="text-center">
+											<a> <strong>查看全部</strong> <i
+												class="fa fa-angle-right"></i>
+											</a>
+										</div>
+									</li>
+								</ul></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+		        <div class="right_col" role="main">
+		            <div class="row">
+		              <div class="col-md-12 col-sm-12 col-xs-12">
+						  <div class="x_panel">
+		                  <div class="x_title">
+		                    <h2><i class="fa fa-bars"></i> 房屋装修 </h2>               
+		                    <div class="clearfix"></div>
+		                  </div>
+		                  <div class="x_content">
+		                    <div class="" role="tabpanel" data-example-id="togglable-tabs">
+		                      <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+		                        <li role="presentation" class=""><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">装修记录</a>
+		                        </li>
+		                        <li role="presentation" class="active"><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="true">装修申请</a>
+		                        </li>
+		                      </ul>
+		                      <div id="myTabContent" class="tab-content">
+		                        <div role="tabpanel" class="tab-pane fade" id="tab_content1" aria-labelledby="home-tab">
+		                          
+		                          	
+		                          	
+		                          <div class="x_panel">
+					                  <div class="x_title">
+					                    <h2>房屋装修记录</h2>			                    
+					                    <div class="clearfix"></div>
+					                  </div>
+					
+					                  <div class="x_content">
+					                    <div class="table-responsive">
+					                      <table class="table table-striped jambo_table bulk_action">
+					                        <thead>
+					                          <tr class="headings">
+					                            <th>
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </th>
+					                            <th class="column-title">装修编号</th>
+					                            <th class="column-title">装修时间</th>
+					                            <th class="column-title">房产</th>
+					                            <th class="column-title">装修人姓名</th>
+					                            <th class="column-title">装修状态</th>
+					                            <th class="column-title">装修内容</th>
+					                            <th class="column-title no-link last"><span class="nobr">审核意见</span>
+					                            </th>
+					                            <th class="bulk-actions" colspan="7">
+					                              <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+					                            </th>
+					                          </tr>
+					                        </thead>
+					
+					                        <tbody>
+					                          <tr class="even pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000040</td>
+					                            <td class=" ">May 23, 2014 11:47:56 PM </td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">John Blank L</td>
+					                            <td class=" ">已验收</td>
+					                            <td class="a-right a-right ">自来水主管道生锈漏水</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="odd pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000039</td>
+					                            <td class=" ">May 23, 2014 11:30:12 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">John Blank L</td>
+					                            <td class=" ">已验收</td>
+					                            <td class="a-right a-right ">自来水主管道生锈漏水</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="even pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000038</td>
+					                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">Mike Smith</td>
+					                            <td class=" ">已验收</td>
+					                            <td class="a-right a-right ">自来水主管道生锈漏水</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="odd pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000037</td>
+					                            <td class=" ">May 24, 2014 10:52:44 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">Mike Smith</td>
+					                            <td class=" ">已验收</td>
+					                            <td class="a-right a-right ">申请对墙的外立面增加保暖处理</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="even pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000040</td>
+					                            <td class=" ">May 24, 2014 11:47:56 PM </td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">审批通过</td>
+					                            <td class="a-right a-right ">申请对墙的外立面增加保暖处理</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="odd pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000039</td>
+					                            <td class=" ">May 26, 2014 11:30:12 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">审批通过</td>
+					                            <td class="a-right a-right ">申请对墙的外立面增加保暖处理</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="even pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000038</td>
+					                            <td class=" ">May 26, 2014 10:55:33 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">审批通过</td>
+					                            <td class="a-right a-right ">阳台下方墙壁渗水严重，请尽快安排维修</td>
+					                            <td class=" last"><a href="#">同意</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="odd pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000037</td>
+					                            <td class=" ">May 26, 2014 10:52:44 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">待审批</td>
+					                            <td class="a-right a-right ">阳台下方墙壁渗水严重，请尽快安排维修</td>
+					                            <td class=" last"><a href="#">------</a>
+					                            </td>
+					                          </tr>
+					
+					                          <tr class="even pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000040</td>
+					                            <td class=" ">May 27, 2014 11:47:56 PM </td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">待审批</td>
+					                            <td class="a-right a-right ">阳台下方墙壁渗水严重，请尽快安排维修</td>
+					                            <td class=" last"><a href="#">------</a>
+					                            </td>
+					                          </tr>
+					                          <tr class="odd pointer">
+					                            <td class="a-center ">
+					                              <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+					                            </td>
+					                            <td class=" ">121000039</td>
+					                            <td class=" ">May 28, 2014 11:30:12 PM</td>
+					                            <td class=" ">中东首座#1号楼#1单元#101室</td>
+					                            <td class=" ">------</td>
+					                            <td class=" ">待审批</td>
+					                            <td class="a-right a-right ">阳台下方墙壁渗水严重，请尽快安排维修</td>
+					                            <td class=" last"><a href="#">------</a>
+					                            </td>
+					                          </tr>
+					                        </tbody>
+					                      </table>
+					                    </div>
+												
+											
+					                  </div>
+					                </div>
+		                          
+		                          
+		                          
+		                          
+		                        </div>
+		                        <div role="tabpanel" class="tab-pane fade active in" id="tab_content2" aria-labelledby="profile-tab">
+		                          
+		                          <div class="x_panel">
+					                  <div class="x_title">
+					                    <h2>房屋装修申请</h2>		                    
+					                    <div class="clearfix"></div>
+					                  </div>
+					                  <div class="x_content">
+					
+					                    <!-- start form for validation -->
+					                    <form id="demo-form" data-parsley-validate="" novalidate="">
+					                    	<label for="heard">选择房产：</label>
+					                          <select id="heard" class="form-control" required="">
+					                          	<option value=""> - </option>
+					                            <option value="">中东首座#1号楼#1单元#101室</option>
+					                            <option value="press">东风仓库#1号仓#第1层#101室</option>
+					                          </select>
+					                      	<label for="fullname">业主姓名：</label>
+						                    <input type="text" id="fullname" class="form-control" name="fullname" required="">			
+						                    <label for="email">联系电话：</label>
+						                    <input type="email" id="email" class="form-control" name="email" data-parsley-trigger="change" required="">
+			  								<label for="message">装修内容：</label>
+						                    <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.." data-parsley-validation-threshold="10"></textarea><br>    
+						                    
+						                    
+						                    <span class="btn btn-primary">提交</span>
+										</form>
+					                    <!-- end form for validations -->
+					                  </div>
+					                </div>   
+		                        </div>                      
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		        </div>
+		        <!-- /page content -->
+
+			<!-- footer content -->
+			<footer>
+				<div class="pull-right">
+					物业管理系统 - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+				</div>
+				<div class="clearfix"></div>
+			</footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="../vendors/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script src="../vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="../vendors/nprogress/nprogress.js"></script>
+
+	<!-- Custom Theme Scripts -->
+	<script src="../build/js/custom.min.js"></script>
+</body>
+</html>
