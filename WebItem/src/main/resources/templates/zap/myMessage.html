@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>物业管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md " >
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="adminIndex" class="site_title"><i class="fa fa-bank"></i> <span>物业管理系统</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                        <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>欢迎,</span>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
+                    <div class="menu_section">
+                        <h3>系统菜单</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-user"></i>个人办公 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/myMessage">我的消息</a></li>
+
+                                    <li><a href="/mySuggestion">我的意见箱</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-users"></i> 业主管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/ownerInfo">业主信息</a></li>
+                                    <li><a href="#">业主验房</a></li>
+                                    <li><a href="#">业主装修</a></li>
+                                    <li><a href="#">业主入住</a></li>
+                                    <li><a href="#">业主投诉</a></li>
+                                    <li><a href="#">请修管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> 收费管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">生成账单</a></li>
+                                    <li><a href="#">修改账单</a></li>
+                                    <li><a href="#">费用收取</a></li>
+                                    <li><a href="#">收款变更</a></li>
+                                    <li><a href="#">预收款管理</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">滞纳金设置</a></li>
+                                    <li><a href="#">车位信息</a></li>
+                                    <li><a href="#">车位销售</a></li>
+                                    <li><a href="#">车位出粗</a></li>
+                                </ul>
+                            </li><li><a><i class="fa fa-shield"></i>安保管理 <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="#">车辆进出</a></li>
+                                <li><a href="#">保安安排</a></li>
+                                <li><a href="#">执勤管理</a></li>
+                                <li><a href="#">来访管理</a></li>
+                                <li><a href="#">物品出入</a></li>
+                            </ul>
+                        </li>
+                            </li><li><a><i class="fa fa-fire-extinguisher"></i>消防管理<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="#">社区活动</a></li>
+                                <li><a href="#">消防设施</a></li>
+                                <li><a href="#">消防巡查</a></li>
+                                <li><a href="#">消防事故</a></li>
+                            </ul>
+                        </li>
+                            </li><li><a><i class="fa fa-envira"></i>保洁绿化<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="#">绿化设置</a></li>
+                                <li><a href="#">绿化检查</a></li>
+                                <li><a href="#">保洁项目</a></li>
+                                <li><a href="#">保洁安排</a></li>
+                                <li><a href="#">保洁记录</a></li>
+                                <li><a href="#">保洁检查</a></li>
+                            </ul>
+                        </li>
+                            </li>
+                            <li><a><i class="fa fa-hand-grab-o"></i>行政管理<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">公告管理</a></li>
+                                    <li><a href="#">规章制度</a></li>
+                                    <li><a href="#">意见箱设置</a></li>
+                                    <li><a href="#">员工通讯录</a></li>
+                                </ul>
+                            </li>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/img.jpg" alt="">管理员
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="javascript:;"> 修改密码</a></li>
+                                <li><a href="javascript:;"> 修改资料</a></li>
+                                <li><a href="javascript:;">帮助</a></li>
+                                <li><a href="/index"><i class="fa fa-sign-out pull-right"></i> 注销登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div>
+                <div class="x_content">
+
+
+                    <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">收消息</a>
+                            </li>
+                            <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">已发送消息</a>
+                            </li>
+                            <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">写消息</a>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="x_panel">
+                                                <div class="x_content">
+                                                    <p>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            全部消息 <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#" class="">未读消息</a></li>
+                                                            <li><a href="#">已读消息</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                        <button class="btn btn-info">标记已读</button>
+                                                        <button class="btn btn-danger">删除</button>
+                                                        <!-- Single button -->
+                                                    </p>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped jambo_table bulk_action">
+                                                            <thead>
+                                                            <tr class="headings">
+                                                                <th>
+                                                                    <input type="checkbox" id="check-all" class="flat">
+                                                                </th>
+                                                                <th class="column-title">状态 </th>
+                                                                <th class="column-title">内容</th>
+                                                                <th class="column-title">发送人 </th>
+                                                                <th class="column-title">发送时间 </th>
+                                                                </th>
+                                                                <th class="bulk-actions" colspan="4">
+                                                                    <a class="antoo" style="color:#fff; font-weight:500;"><span class="action-cnt"> </span>  <i class="fa fa-chevron-down"></i></a>
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                            <tr class="even pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="odd pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="even pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备</td>
+                                                                <td class=" ">19-05-15 21:51</td>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="odd pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="even pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="odd pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="even pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 ></td>
+                                                                <td class=" ">19-05-15 21:51</td>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="odd pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr class="even pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备 </td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="odd pointer">
+                                                                <td class="a-center ">
+                                                                    <input type="checkbox" class="flat" name="table_records">
+                                                                </td>
+                                                                <td class=" ">未读</td>
+                                                                <td class=" ">有新工作：需要办理！ </td>
+                                                                <td class=" ">刘备</td>
+                                                                <td class=" ">19-05-15 21:51</td>
+
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                                <p>没有找到已发送的消息</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade " id="tab_content3" aria-labelledby="profile-tab">
+
+                                    <div>
+                                        <span>收件人</span>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <p>消息内容</p>
+                                        <textarea name="" id="" cols="50" rows="10" style="display: block;width: 100%;height: 20%;resize: none;margin:1%"></textarea>
+                                        <button class="btn btn-success">发送</button>
+                                        <button class="btn btn-info" type="reset">重置</button>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+</div>
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+</body>
+</html>
