@@ -46,84 +46,54 @@
             <br />
 
             <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
-              <div class="menu_section">
-                <h3>系统菜单</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-user"></i>个人办公 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="/myMessage">我的消息</a></li>
-                      <li><a href="/mySuggestion">我的意见箱</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-users"></i> 业主管理 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="/ownerInfo">业主信息</a></li>
-                      <li><a href="#">业主验房</a></li>
-                      <li><a href="#">业主装修</a></li>
-                      <li><a href="#">业主入住</a></li>
-                      <li><a href="#">业主投诉</a></li>
-                      <li><a href="#">请修管理</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-money"></i> 收费管理 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">生成账单</a></li>
-                      <li><a href="#">修改账单</a></li>
-                      <li><a href="#">费用收取</a></li>
-                      <li><a href="#">收款变更</a></li>
-                      <li><a href="#">预收款管理</a></li>
-                    </ul>
-                  </li>
+ 				<!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
+                    <div class="menu_section">
+                        <h3>系统菜单</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-user"></i>个人办公 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/myMessage">我的消息</a></li>
+                                    <li><a href="/mySuggestion">我的意见箱</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-users"></i> 业主管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/ownerInfo">业主信息</a></li>
+                                    <li><a href="/ownerComplain">业主投诉</a></li>
+                                    <li><a href="/ownerService">请修管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> 收费管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/feeCollection">费用收取</a></li>
+                                    <li><a href="/queryBill">查询账单</a></li>
 
-                  <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">滞纳金设置</a></li>
-                      <li><a href="#">车位信息</a></li>
-                      <li><a href="#">车位销售</a></li>
-                      <li><a href="#">车位出粗</a></li>
-                    </ul>
-                  </li><li><a><i class="fa fa-shield"></i>安保管理 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">车辆进出</a></li>
-                      <li><a href="#">保安安排</a></li>
-                      <li><a href="#">执勤管理</a></li>
-                      <li><a href="#">来访管理</a></li>
-                      <li><a href="#">物品出入</a></li>
-                    </ul>
-                  </li>
-                  </li><li><a><i class="fa fa-fire-extinguisher"></i>消防管理<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">社区活动</a></li>
-                      <li><a href="#">消防设施</a></li>
-                      <li><a href="#">消防巡查</a></li>
-                      <li><a href="#">消防事故</a></li>
-                    </ul>
-                  </li>
-                  </li><li><a><i class="fa fa-envira"></i>保洁绿化<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">绿化设置</a></li>
-                      <li><a href="#">绿化检查</a></li>
-                      <li><a href="#">保洁项目</a></li>
-                      <li><a href="#">保洁安排</a></li>
-                      <li><a href="#">保洁记录</a></li>
-                      <li><a href="#">保洁检查</a></li>
-                    </ul>
-                  </li>
-                  </li>
-                  <li><a><i class="fa fa-hand-grab-o"></i>行政管理<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="#">公告管理</a></li>
-                    <li><a href="#">规章制度</a></li>
-                    <li><a href="#">意见箱设置</a></li>
-                    <li><a href="#">员工通讯录</a></li>
-                  </ul>
-                </li>
-                  </li>
+                                </ul>
+                            </li>
 
-                </ul>
-              </div>
-            </div>
+                            <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/carPartsInfo">车位信息</a></li>
+                                    <li><a href="/carPartsSale">车位销售</a></li>
+                                </ul>
+                            </li><li><a><i class="fa fa-shield"></i>安保管理 <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="/carInOrOut">车辆进出</a></li>
+                                <li><a href="/securityManage">保安安排</a></li>
+                                <li><a href="/dutyManage">执勤管理</a></li>
+                            </ul>
+                        </li>
+                            <li><a><i class="fa fa-hand-grab-o"></i>行政管理<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/noticeManage">公告管理</a></li>
+                                    <li><a href="/ruleManage">规章制度</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
             <!-- /sidebar menu -->
           </div>
         </div>

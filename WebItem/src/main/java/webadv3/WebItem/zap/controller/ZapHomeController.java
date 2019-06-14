@@ -5,12 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HomeController {
+public class ZapHomeController {
 
-	@RequestMapping("/index")
-	public String toLogin(Model model) {
-		return "index";
-	}
 	@RequestMapping("/adminIndex")
 	public String toIndex(Model model) {
 		return "zap/adminIndex"; 

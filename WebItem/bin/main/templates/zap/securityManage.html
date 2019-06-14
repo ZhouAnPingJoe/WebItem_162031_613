@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>物业管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md " >
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="/adminIndex" class="site_title"><i class="fa fa-bank"></i> <span>物业管理系统</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                        <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>欢迎,</span>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
+                    <div class="menu_section">
+                        <h3>系统菜单</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-user"></i>个人办公 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/myMessage">我的消息</a></li>
+                                    <li><a href="/mySuggestion">我的意见箱</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-users"></i> 业主管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/ownerInfo">业主信息</a></li>
+                                    <li><a href="/ownerComplain">业主投诉</a></li>
+                                    <li><a href="/ownerService">请修管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> 收费管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/feeCollection">费用收取</a></li>
+                                    <li><a href="/queryBill">查询账单</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/carPartsInfo">车位信息</a></li>
+                                    <li><a href="/carPartsSale">车位销售</a></li>
+                                </ul>
+                            </li><li><a><i class="fa fa-shield"></i>安保管理 <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="/carInOrOut">车辆进出</a></li>
+                                <li><a href="/securityManage">保安安排</a></li>
+                                <li><a href="/dutyManage">执勤管理</a></li>
+                            </ul>
+                        </li>
+                            <li><a><i class="fa fa-hand-grab-o"></i>行政管理<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/noticeManage">公告管理</a></li>
+                                    <li><a href="/ruleManage">规章制度</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/img.jpg" alt="">管理员
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="javascript:;"> 修改密码</a></li>
+                                <li><a href="javascript:;"> 修改资料</a></li>
+                                <li><a href="javascript:;">帮助</a></li>
+                                <li><a href="/index"><i class="fa fa-sign-out pull-right"></i> 注销登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <h3>保安安排</h3>
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    班次 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="">地段 </a></li>
+                                    <li><a href="#">值班人员</a></li>
+
+                                </ul>
+                            </div>
+
+                            <input type="text" class="search_init" placeholder="">
+                            <button class="btn btn-default">查询</button>
+                            <button class="btn btn-success">增加</button>
+                            <button class="btn btn-danger bottom-right">删除</button>
+                            <!-- Single button -->
+
+                            <div class="table-responsive"><table class="table table-striped jambo_table bulk_action">
+                                <thead>
+                                <tr class="headings autocomplete-suggestion">
+                                    <th>
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </th>
+                                    <th class="column-title">开始日期 </th>
+                                    <th class="column-title">结束日期</th>
+                                    <th class="column-title">班次 </th>
+                                    <th class="column-title">时段 </th>
+                                    <th class="column-title">地段</th>
+                                    <th class="column-title">值班人员</th>
+
+                                    <th class="bulk-actions" colspan="6">
+                                        <a class="antoo" style="color:#fff; font-weight:500;"><span class="action-cnt"> </span>  <i class="fa fa-chevron-down"></i></a>
+                                    </th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="even pointer autocomplete-suggestion autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+                                </tr>
+                                <tr class="odd pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="even pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="odd pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td><td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="even pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="odd pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="even pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+                                </tr>
+                                <tr class="odd pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+
+                                <tr class="even pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                <tr class="odd pointer autocomplete-suggestion">
+                                    <td class="a-center ">
+                                        <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                    </td>
+                                    <td class=" "><a href="">2019-06-04</a></td>
+                                    <td class=" "><a href="">2019-06-30</a></td>
+                                    <td class=" ">2</td>
+                                    <td class=" ">12</td>
+                                    <td class="">小区东门</td>
+                                    <td class="">刘备</td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+</div>
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+</body>
+</html>

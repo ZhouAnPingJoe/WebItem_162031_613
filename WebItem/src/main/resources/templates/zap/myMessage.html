@@ -29,7 +29,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="adminIndex" class="site_title"><i class="fa fa-bank"></i> <span>物业管理系统</span></a>
+                    <a href="index.html" class="site_title"><i class="fa fa-bank"></i> <span>物业管理系统</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -63,68 +63,35 @@
                             <li><a><i class="fa fa-users"></i> 业主管理 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/ownerInfo">业主信息</a></li>
-                                    <li><a href="#">业主验房</a></li>
-                                    <li><a href="#">业主装修</a></li>
-                                    <li><a href="#">业主入住</a></li>
-                                    <li><a href="#">业主投诉</a></li>
-                                    <li><a href="#">请修管理</a></li>
+                                    <li><a href="/ownerComplain">业主投诉</a></li>
+                                    <li><a href="/ownerService">请修管理</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-money"></i> 收费管理 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="#">生成账单</a></li>
-                                    <li><a href="#">修改账单</a></li>
-                                    <li><a href="#">费用收取</a></li>
-                                    <li><a href="#">收款变更</a></li>
-                                    <li><a href="#">预收款管理</a></li>
+                                    <li><a href="/feeCollection">费用收取</a></li>
+                                    <li><a href="/queryBill">查询账单</a></li>
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
+                             <li><a><i class="fa fa-car"></i>车位管理 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="#">滞纳金设置</a></li>
-                                    <li><a href="#">车位信息</a></li>
-                                    <li><a href="#">车位销售</a></li>
-                                    <li><a href="#">车位出粗</a></li>
+                                    <li><a href="/carPartsInfo">车位信息</a></li>
+                                    <li><a href="/carPartsSale">车位销售</a></li>
                                 </ul>
                             </li><li><a><i class="fa fa-shield"></i>安保管理 <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
-                                <li><a href="#">车辆进出</a></li>
-                                <li><a href="#">保安安排</a></li>
-                                <li><a href="#">执勤管理</a></li>
-                                <li><a href="#">来访管理</a></li>
-                                <li><a href="#">物品出入</a></li>
+                                <li><a href="/carInOrOut">车辆进出</a></li>
+                                <li><a href="/securityManage">保安安排</a></li>
+                                <li><a href="/dutyManage">执勤管理</a></li>
                             </ul>
                         </li>
-                            </li><li><a><i class="fa fa-fire-extinguisher"></i>消防管理<span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <li><a href="#">社区活动</a></li>
-                                <li><a href="#">消防设施</a></li>
-                                <li><a href="#">消防巡查</a></li>
-                                <li><a href="#">消防事故</a></li>
-                            </ul>
-                        </li>
-                            </li><li><a><i class="fa fa-envira"></i>保洁绿化<span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <li><a href="#">绿化设置</a></li>
-                                <li><a href="#">绿化检查</a></li>
-                                <li><a href="#">保洁项目</a></li>
-                                <li><a href="#">保洁安排</a></li>
-                                <li><a href="#">保洁记录</a></li>
-                                <li><a href="#">保洁检查</a></li>
-                            </ul>
-                        </li>
-                            </li>
                             <li><a><i class="fa fa-hand-grab-o"></i>行政管理<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="#">公告管理</a></li>
-                                    <li><a href="#">规章制度</a></li>
-                                    <li><a href="#">意见箱设置</a></li>
-                                    <li><a href="#">员工通讯录</a></li>
+                                    <li><a href="/noticeManage">公告管理</a></li>
+                                    <li><a href="/ruleManage">规章制度</a></li>
                                 </ul>
                             </li>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -151,7 +118,7 @@
                                 <li><a href="javascript:;"> 修改密码</a></li>
                                 <li><a href="javascript:;"> 修改资料</a></li>
                                 <li><a href="javascript:;">帮助</a></li>
-                                <li><a href="/index"><i class="fa fa-sign-out pull-right"></i> 注销登录</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 注销登录</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -200,7 +167,7 @@
                                                     <div class="table-responsive">
                                                         <table class="table table-striped jambo_table bulk_action">
                                                             <thead>
-                                                            <tr class="headings">
+                                                            <tr class="headings autocomplete-suggestion">
                                                                 <th>
                                                                     <input type="checkbox" id="check-all" class="flat">
                                                                 </th>
@@ -216,7 +183,7 @@
                                                             </thead>
 
                                                             <tbody>
-                                                            <tr class="even pointer">
+                                                            <tr class="even pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -227,7 +194,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="odd pointer">
+                                                            <tr class="odd pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -238,7 +205,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="even pointer">
+                                                            <tr class="even pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -248,7 +215,7 @@
                                                                 <td class=" ">19-05-15 21:51</td>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="odd pointer">
+                                                            <tr class="odd pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -259,7 +226,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="even pointer">
+                                                            <tr class="even pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -269,7 +236,7 @@
                                                                 <td class=" ">19-05-15 21:51</td>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="odd pointer">
+                                                            <tr class="odd pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -280,7 +247,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="even pointer">
+                                                            <tr class="even pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -290,7 +257,7 @@
                                                                 <td class=" ">19-05-15 21:51</td>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="odd pointer">
+                                                            <tr class="odd pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -302,7 +269,7 @@
                                                                 </td>
                                                             </tr>
 
-                                                            <tr class="even pointer">
+                                                            <tr class="even pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
@@ -313,7 +280,7 @@
 
                                                                 </td>
                                                             </tr>
-                                                            <tr class="odd pointer">
+                                                            <tr class="odd pointer autocomplete-suggestion">
                                                                 <td class="a-center ">
                                                                     <input type="checkbox" class="flat" name="table_records">
                                                                 </td>
