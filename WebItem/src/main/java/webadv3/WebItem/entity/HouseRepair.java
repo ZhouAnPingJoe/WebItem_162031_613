@@ -1,33 +1,43 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 
+/**
+ * The persistent class for the house_repair database table.
+ * 
+ */
+@Entity
+@Table(name="house_repair")
+@NamedQuery(name="HouseRepair.findAll", query="SELECT h FROM HouseRepair h")
 public class HouseRepair implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
 	private int id;
 
-	
+	@Column(name="check_status")
 	private String checkStatus;
 
-	
+	@Column(name="check_time")
 	private Timestamp checkTime;
 
 	private String content;
 
-	
+	@Column(name="repair_cost")
 	private double repairCost;
 
-	private int sender;
+	private String sender;
 
 	private String status;
 
 	private Timestamp time;
 
-
+	//bi-directional many-to-one association to Propertyadmin
+	@ManyToOne
+	@JoinColumn(name="account")
 	private Propertyadmin propertyadmin;
 
 	public HouseRepair() {
@@ -73,11 +83,11 @@ public class HouseRepair implements Serializable {
 		this.repairCost = repairCost;
 	}
 
-	public int getSender() {
+	public String getSender() {
 		return this.sender;
 	}
 
-	public void setSender(int sender) {
+	public void setSender(String sender) {
 		this.sender = sender;
 	}
 

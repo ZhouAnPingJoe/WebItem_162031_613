@@ -1,17 +1,23 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 
 
-
-
+/**
+ * The persistent class for the user database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@Column(name="user_id")
+	private int userId;
 
-	private int id;
-
-	private int account;
+	private String account;
 
 	private String password;
 
@@ -20,19 +26,19 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	public int getId() {
-		return this.id;
+	public int getUserId() {
+		return this.userId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
-	public int getAccount() {
+	public String getAccount() {
 		return this.account;
 	}
 
-	public void setAccount(int account) {
+	public void setAccount(String account) {
 		this.account = account;
 	}
 

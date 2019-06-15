@@ -1,11 +1,21 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 
+
+/**
+ * The persistent class for the family_member database table.
+ * 
+ */
+@Entity
+@Table(name="family_member")
+@NamedQuery(name="FamilyMember.findAll", query="SELECT f FROM FamilyMember f")
 public class FamilyMember implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	
+	@Id
+	@Column(name="member_id")
 	private int memberId;
 
 	private String name;
@@ -14,11 +24,13 @@ public class FamilyMember implements Serializable {
 
 	private String sex;
 
-	private int telephone;
+	private String telephone;
 
-	private String workunit;
+	private String wordunit;
 
-	
+	//bi-directional many-to-one association to Owner
+	@ManyToOne
+	@JoinColumn(name="account")
 	private Owner owner;
 
 	public FamilyMember() {
@@ -56,20 +68,20 @@ public class FamilyMember implements Serializable {
 		this.sex = sex;
 	}
 
-	public int getTelephone() {
+	public String getTelephone() {
 		return this.telephone;
 	}
 
-	public void setTelephone(int telephone) {
+	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
 
-	public String getWorkunit() {
-		return this.workunit;
+	public String getWordunit() {
+		return this.wordunit;
 	}
 
-	public void setWorkunit(String wordunit) {
-		this.workunit = wordunit;
+	public void setWordunit(String wordunit) {
+		this.wordunit = wordunit;
 	}
 
 	public Owner getOwner() {

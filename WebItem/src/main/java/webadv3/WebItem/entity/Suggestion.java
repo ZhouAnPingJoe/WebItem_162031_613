@@ -1,24 +1,34 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
-
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 
+/**
+ * The persistent class for the suggestion database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Suggestion.findAll", query="SELECT s FROM Suggestion s")
 public class Suggestion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="suggestion_id")
 	private int suggestionId;
 
 	private String content;
 
-	private int sender;
+	private String sender;
 
 	private String status;
 
 	private Timestamp time;
 
+	//bi-directional many-to-one association to Propertyadmin
+	@ManyToOne
+	@JoinColumn(name="account")
 	private Propertyadmin propertyadmin;
 
 	public Suggestion() {
@@ -40,11 +50,11 @@ public class Suggestion implements Serializable {
 		this.content = content;
 	}
 
-	public int getSender() {
+	public String getSender() {
 		return this.sender;
 	}
 
-	public void setSender(int sender) {
+	public void setSender(String sender) {
 		this.sender = sender;
 	}
 

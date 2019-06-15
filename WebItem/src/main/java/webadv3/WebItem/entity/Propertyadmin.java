@@ -4,50 +4,74 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
+/**
+ * The persistent class for the propertyadmin database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Propertyadmin.findAll", query="SELECT p FROM Propertyadmin p")
 public class Propertyadmin implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private String account;
 
-	private int account;
-
-
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date birth;
 
 	private String email;
 
 	private String password;
 
+	@Column(name="property_admin_username")
+	private String propertyAdminUsername;
+
 	private String sex;
 
-	private int telephone;
+	private String telephone;
 
 	private String type;
 
-
+	//bi-directional many-to-one association to HouseRepair
+	@OneToMany(mappedBy="propertyadmin")
 	private List<HouseRepair> houseRepairs;
 
-
+	//bi-directional many-to-one association to Message
+	@OneToMany(mappedBy="propertyadmin")
 	private List<Message> messages;
 
-
+	//bi-directional many-to-one association to Notice
+	@OneToMany(mappedBy="propertyadmin")
 	private List<Notice> notices;
 
-
+	//bi-directional many-to-one association to Rule
+	@OneToMany(mappedBy="propertyadmin")
 	private List<Rule> rules;
 
-
+	//bi-directional many-to-one association to Suggestion
+	@OneToMany(mappedBy="propertyadmin")
 	private List<Suggestion> suggestions;
 
 	public Propertyadmin() {
 	}
 
-	public int getAccount() {
+	public String getAccount() {
 		return this.account;
 	}
 
-	public void setAccount(int account) {
+	public void setAccount(String account) {
 		this.account = account;
 	}
 
@@ -75,6 +99,14 @@ public class Propertyadmin implements Serializable {
 		this.password = password;
 	}
 
+	public String getPropertyAdminUsername() {
+		return this.propertyAdminUsername;
+	}
+
+	public void setPropertyAdminUsername(String propertyAdminUsername) {
+		this.propertyAdminUsername = propertyAdminUsername;
+	}
+
 	public String getSex() {
 		return this.sex;
 	}
@@ -83,11 +115,11 @@ public class Propertyadmin implements Serializable {
 		this.sex = sex;
 	}
 
-	public int getTelephone() {
+	public String getTelephone() {
 		return this.telephone;
 	}
 
-	public void setTelephone(int telephone) {
+	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
 

@@ -1,27 +1,42 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.List;
 
 
-
+/**
+ * The persistent class for the house database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="House.findAll", query="SELECT h FROM House h")
 public class House implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="house_id")
 	private int houseId;
 
 	private double area;
 
+	@Column(name="house_number")
+	private String houseNumber;
+
 	private String type;
 
-
+	//bi-directional many-to-one association to Fee
+	@OneToMany(mappedBy="house")
 	private List<Fee> fees;
 
-
+	//bi-directional many-to-one association to BulidingUnitId
+	@ManyToOne
+	@JoinColumn(name="building_unitid")
 	private BulidingUnitId bulidingUnitId;
 
-
+	//bi-directional many-to-one association to Owner
+	@ManyToOne
+	@JoinColumn(name="account")
 	private Owner owner;
 
 	public House() {
@@ -41,6 +56,14 @@ public class House implements Serializable {
 
 	public void setArea(double area) {
 		this.area = area;
+	}
+
+	public String getHouseNumber() {
+		return this.houseNumber;
+	}
+
+	public void setHouseNumber(String houseNumber) {
+		this.houseNumber = houseNumber;
 	}
 
 	public String getType() {

@@ -1,34 +1,45 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 import java.sql.Timestamp;
 
 
-
+/**
+ * The persistent class for the security_manage database table.
+ * 
+ */
+@Entity
+@Table(name="security_manage")
+@NamedQuery(name="SecurityManage.findAll", query="SELECT s FROM SecurityManage s")
 public class SecurityManage implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="security_id")
 	private int securityId;
 
 	private String address;
 
 	private String classes;
 
-
+	@Temporal(TemporalType.DATE)
+	@Column(name="end_date")
 	private Date endDate;
 
+	@Column(name="end_time")
 	private Timestamp endTime;
 
 	private String job;
 
 	private String member;
 
-
+	@Temporal(TemporalType.DATE)
+	@Column(name="start_date")
 	private Date startDate;
 
-
+	@Column(name="start_time")
 	private Timestamp startTime;
 
 	public SecurityManage() {

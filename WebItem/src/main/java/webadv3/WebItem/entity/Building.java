@@ -1,27 +1,35 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 
-
-
+/**
+ * The persistent class for the building database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Building.findAll", query="SELECT b FROM Building b")
 public class Building implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="building_id")
 	private int buildingId;
 
 	private String name;
 
-
+	@Temporal(TemporalType.DATE)
 	private Date time;
 
-
+	//bi-directional many-to-one association to BulidingUnitId
+	@OneToMany(mappedBy="building")
 	private List<BulidingUnitId> bulidingUnitIds;
 
-
+	//bi-directional many-to-one association to Depot
+	@OneToMany(mappedBy="building")
 	private List<Depot> depots;
 
 	public Building() {

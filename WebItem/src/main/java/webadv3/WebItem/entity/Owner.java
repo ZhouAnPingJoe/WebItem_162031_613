@@ -1,16 +1,23 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.List;
 
 
-
+/**
+ * The persistent class for the owner database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Owner.findAll", query="SELECT o FROM Owner o")
 public class Owner implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private int account;
+	@Id
+	private String account;
 
-	private int idcard;
+	private String idcard;
 
 	private String name;
 
@@ -20,36 +27,42 @@ public class Owner implements Serializable {
 
 	private String status;
 
-	private int telephone;
+	private String telephone;
 
 	private String type;
 
+	//bi-directional many-to-one association to CarInfo
+	@OneToMany(mappedBy="owner")
 	private List<CarInfo> carInfos;
 
+	//bi-directional many-to-one association to Depot
+	@OneToMany(mappedBy="owner")
 	private List<Depot> depots;
 
-	
+	//bi-directional many-to-one association to FamilyMember
+	@OneToMany(mappedBy="owner")
 	private List<FamilyMember> familyMembers;
 
-
+	//bi-directional many-to-one association to House
+	@OneToMany(mappedBy="owner")
 	private List<House> houses;
 
 	public Owner() {
 	}
 
-	public int getAccount() {
+	public String getAccount() {
 		return this.account;
 	}
 
-	public void setAccount(int account) {
+	public void setAccount(String account) {
 		this.account = account;
 	}
 
-	public int getIdcard() {
+	public String getIdcard() {
 		return this.idcard;
 	}
 
-	public void setIdcard(int idcard) {
+	public void setIdcard(String idcard) {
 		this.idcard = idcard;
 	}
 
@@ -85,11 +98,11 @@ public class Owner implements Serializable {
 		this.status = status;
 	}
 
-	public int getTelephone() {
+	public String getTelephone() {
 		return this.telephone;
 	}
 
-	public void setTelephone(int telephone) {
+	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
 

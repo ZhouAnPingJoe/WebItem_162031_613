@@ -1,36 +1,45 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 
-
+/**
+ * The persistent class for the fee database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Fee.findAll", query="SELECT f FROM Fee f")
 public class Fee implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="fee_id")
 	private int feeId;
 
 	private double arrearage;
 
-
+	@Column(name="end_time")
 	private Timestamp endTime;
 
 	private String name;
 
-
+	@Column(name="payment_time")
 	private Timestamp paymentTime;
 
 	private double price;
 
 	private double quantity;
 
-	private int recorder;
+	private String recorder;
 
-
+	@Column(name="start_time")
 	private Timestamp startTime;
 
-
+	//bi-directional many-to-one association to House
+	@ManyToOne
+	@JoinColumn(name="house_id")
 	private House house;
 
 	public Fee() {
@@ -92,11 +101,11 @@ public class Fee implements Serializable {
 		this.quantity = quantity;
 	}
 
-	public int getRecorder() {
+	public String getRecorder() {
 		return this.recorder;
 	}
 
-	public void setRecorder(int recorder) {
+	public void setRecorder(String recorder) {
 		this.recorder = recorder;
 	}
 

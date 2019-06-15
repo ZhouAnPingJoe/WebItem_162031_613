@@ -1,14 +1,21 @@
 package webadv3.WebItem.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 
 
-
+/**
+ * The persistent class for the rule database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Rule.findAll", query="SELECT r FROM Rule r")
 public class Rule implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-
+	@Id
+	@Column(name="rule_id")
 	private int ruleId;
 
 	private String content;
@@ -17,9 +24,12 @@ public class Rule implements Serializable {
 
 	private String status;
 
-
+	@Temporal(TemporalType.DATE)
 	private Date time;
 
+	//bi-directional many-to-one association to Propertyadmin
+	@ManyToOne
+	@JoinColumn(name="account")
 	private Propertyadmin propertyadmin;
 
 	public Rule() {
