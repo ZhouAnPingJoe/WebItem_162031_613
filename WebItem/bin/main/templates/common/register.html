@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -53,10 +53,10 @@
                     </select>
 
                     <div>
-                        <p th:text="${message}" class="text-center"></p>
+                        <p th:text="${message}" class="text-center" style="color:red;"></p>
                     </div>
                     <div>
-                        <button  type="submit" class="btn btn-default submit" style="font-size:20px;">注册</button>
+                        <button  type="submit" class="btn btn-default submit" style="font-size:20px;" id="register">注册</button>
                     </div>
 
                     <div class="clearfix"></div>
@@ -70,7 +70,24 @@
                 </form>
             </section>
         </div>
+        </div>
+</div>
 
-
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#register").click(function () {
+            if($("#account").val()===""||$("#account").val() == null){
+                alert("账号不能为空");
+                return false;
+            }
+            if($("#password").val()===""||$("#password").val() == null){
+                alert("密码不能为空");
+                return false;
+            }
+        })
+    })
+</script>
 </body>
 </html>

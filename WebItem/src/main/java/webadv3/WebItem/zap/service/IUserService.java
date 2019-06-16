@@ -9,4 +9,7 @@ public interface IUserService {
 	
 	//注册新用户
 	void InsertUser(User user);
+	
+	//修改密码
+	void changePassword(String password ,String account);
 }
