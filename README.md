@@ -1,1 +1,1 @@
-该系统为小区物业管理系统，我写的是物业管理员的部分，用了springBoot + JPA +BootStrap 完成的。
+该系统为小区物业管理系统，我写的是物业管理员的部分，用了springBoot + JPA +BootStrap 完成的。用jpa比用mybatis更好，用mybatis还要手动添加数据库表的字段与实体的属性之间的映射关系，采用jpa根据表生成实体会直接生成映射关系，而且很多sql语句不用自己写。
